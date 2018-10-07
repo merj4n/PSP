@@ -4,6 +4,7 @@ public class Ejercicio2 implements Runnable {
     static final int ASC=0;
     static final int DESC=1;
     static final int MIN=11;
+    static final String SCREEN1="Introduce un número mayor de 10: ";
     int numero;
     int orden;
 
@@ -27,7 +28,7 @@ public class Ejercicio2 implements Runnable {
         int num1;
         Scanner reader = new Scanner(System.in);
         do {
-            System.out.println("Introduce un número mayor de 10: ");
+            System.out.println(SCREEN1);
             num1 = reader.nextInt();
         }while (num1<MIN);
 

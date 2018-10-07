@@ -1,6 +1,8 @@
 public class Ejercicio3 implements Runnable {
         static final int ASC=0;
         static final int DESC=1;
+        static final int SEG=1000;
+        static final int SEG2=1500;
         int orden;
 
         Ejercicio3(int orden){
@@ -11,7 +13,7 @@ public class Ejercicio3 implements Runnable {
             if (orden!=0){
                 for (int i=1;i<=10;i++) {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(SEG);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -20,7 +22,7 @@ public class Ejercicio3 implements Runnable {
             }else {
                 for (int i=1;i<=10;i++) {
                     try {
-                        Thread.sleep(1500);
+                        Thread.sleep(SEG2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

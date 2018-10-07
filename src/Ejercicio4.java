@@ -2,6 +2,11 @@ import java.io.IOException;
 
 public class Ejercicio4 implements Runnable {
     String arg;
+    static final int SEG=1000;
+    static final String SAL="Aplicación cerrada: ";
+    static final String SAL2="\nTiempo: ";
+    static final String SAL3=" s.";
+
     Ejercicio4(String arg){
         this.arg=arg;
     }
@@ -11,8 +16,8 @@ public class Ejercicio4 implements Runnable {
             long t = System.currentTimeMillis();
             Process p = Runtime.getRuntime().exec(arg);
             p.waitFor();
-            long total = (System.currentTimeMillis()-t)/1000;
-            System.out.println("Aplicación cerrada: " + arg +"\nTiempo: " + total + " s.");
+            long total = (System.currentTimeMillis()-t)/SEG;
+            System.out.println(SAL+arg+SAL2+total+SAL3);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
