@@ -40,8 +40,11 @@ public class Ejercicio6 implements Runnable {
         Thread h3 = new Thread(ej3);
 
         h1.setPriority(Thread.NORM_PRIORITY);
+        System.out.println(h1.getPriority());
         h2.setPriority(Thread.MIN_PRIORITY);
+        System.out.println(h2.getPriority());
         h3.setPriority(Thread.MAX_PRIORITY);
+        System.out.println(h3.getPriority());
 
         h1.start();
         h2.start();
